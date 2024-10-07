@@ -1,39 +1,170 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile">
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/back_button"
+        android:text="_iknip"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"/>
+
+    <ImageButton
+        android:id="@+id/notif_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bell"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_toLeftOf="@id/more_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"/>
+
+    <ImageButton
+        android:id="@+id/more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_titik_tiga"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Stats Layout -->
+    <include
+        android:id="@+id/container_stats"
+        layout="@layout/followers_following"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="8dp"/>
+
+    <!-- User Description -->
+    <TextView
+        android:id="@+id/user_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_stats"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="12dp"
+        android:text="Ikhwan Hanipp"
+        android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/textCarrier"
+        android:id="@+id/user_job"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carrier" />
+        android:layout_below="@id/user_description"
+        android:layout_marginLeft="12dp"
+        android:text="Programmer"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
 
-    <ImageView
-        android:id="@+id/signalic"
+    <!-- Quote Section -->
+    <TextView
+        android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:src="@drawable/ic_signal"
-        android:layout_toStartOf="@id/wific"/>
+        android:layout_below="@id/user_job"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:text="“You might not think that programmers are artists, but programming is an extremely creative profession. It’s logic-based creativity.” – John Romero"
+        android:textSize="14sp"
+        android:textColor="#666666"/>
 
-    <ImageView
-        android:id="@+id/wific"
+    <!-- Edit Profile and Share Profile Buttons -->
+    <LinearLayout
+        android:id="@+id/editbagikan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_wifi"
-        android:layout_toEndOf="@id/signalic"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/quote"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
 
-    <ImageView
-        android:id="@+id/batteryic"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/edit_profile_button"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#F0F0F0"
+            android:text="Edit profil"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/share_profile_button"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0F0F0"
+            android:text="Bagikan profil"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frt"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_battery"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/wific"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/editbagikan"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <!-- Feeds Button -->
+        <ImageButton
+            android:id="@+id/feeds_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_feed"
+            android:layout_weight="1"
+            android:contentDescription="Feeds"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <!-- Reels Button -->
+        <ImageButton
+            android:id="@+id/reels_button"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_reels"
+            android:layout_weight="1"
+            android:contentDescription="Reels"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <!-- Tags Button -->
+        <ImageButton
+            android:id="@+id/tags_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tag"
+            android:layout_weight="1"
+            android:contentDescription="Tags"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation Icons -->
+    <include
+        android:id="@+id/bottom_nav"
+        layout="@layout/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"/>
+
 </RelativeLayout>

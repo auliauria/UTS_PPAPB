@@ -166,9 +166,10 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
-<!--        <include-->
-<!--            android:id="@+id/navbar"-->
-<!--            layout="@layout/bottom_navbar"/>-->
+        <include
+            android:id="@+id/navbar"
+            layout="@layout/bottom_navbar"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
