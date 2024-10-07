@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom">
+
+    <ImageButton
+        android:id="@+id/homeic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_active"
+        android:backgroundTint="@color/white"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/searchic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:backgroundTint="@color/white"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/uploadic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_upload"
+        android:backgroundTint="@color/white"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/reelsic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reels"
+        android:backgroundTint="@color/white"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/profileic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile"
+        android:backgroundTint="@color/white"
+        android:layout_weight="1"/>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

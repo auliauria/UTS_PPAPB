@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <TextView
+        android:id="@+id/textCarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrier" />
+
+    <ImageView
+        android:id="@+id/signalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_signal"
+        android:layout_toStartOf="@id/wific"/>
+
+    <ImageView
+        android:id="@+id/wific"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wifi"
+        android:layout_toEndOf="@id/signalic"/>
+
+    <ImageView
+        android:id="@+id/batteryic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wific"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</RelativeLayout>
